@@ -1,4 +1,4 @@
-describe("Dan's Coconuts Live", () => {
+describe("Dan's Coconuts", () => {
   it('loads when visited', () => {
     cy.visit('/')
   })
