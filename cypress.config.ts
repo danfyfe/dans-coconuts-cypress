@@ -1,10 +1,12 @@
+require('dotenv').config()
+
 module.exports = {
   projectId: "3u3goe",
 
   e2e: {
-    baseUrl: 'http://localhost:3000',
+    baseUrl: process.env.BASE_URL,
     // setupNodeEvents(on, config) {
-    //   // implement node event listeners here
+    //   config.env.baseUrl = process.env.BASE_URL
     // },
   },
 };

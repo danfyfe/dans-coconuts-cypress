@@ -14,7 +14,7 @@ describe("Dan's Coconuts - Navigation", () => {
   });
 
   it('should have the correct links', () => {
-    // menu currently has Home, Coconuts, Github links
+    // menu currently has Home, Coconuts, GitHub links
     cy.visit('/')
     .get('#nav-link-menu-ul a').then(($links) => {
       expect($links).to.have.length(3)
@@ -22,8 +22,8 @@ describe("Dan's Coconuts - Navigation", () => {
       expect($links.eq(0)).to.have.attr('href', '/')
       expect($links.eq(1)).to.contain('Coconuts')
       expect($links.eq(1)).to.have.attr('href', '/coconuts')
-      expect($links.eq(0)).to.contain('GitHub')
-      expect($links.eq(0)).to.have.attr('href', '/github')
+      expect($links.eq(2)).to.contain('GitHub')
+      expect($links.eq(2)).to.have.attr('href', '/github')
     })
   });
 });
