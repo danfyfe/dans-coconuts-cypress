@@ -1,6 +1,8 @@
 describe("Dan's Coconuts - Weather", () => {
   it('weather button toggles the weather when clicked', () => {
     cy.visit('/')
+      .get('#weather-widget-btn')
+      .click()
       .get('#weather-btn')
       .click()
       .get('#rain')
@@ -8,6 +10,8 @@ describe("Dan's Coconuts - Weather", () => {
 
   it('weather carries over on route change', () => {
     cy.visit('/')
+    .get('#weather-widget-btn')
+    .click()
     .get('#weather-btn')
     .click()
     .get('#rain')
@@ -17,6 +21,8 @@ describe("Dan's Coconuts - Weather", () => {
 
   it('remembers the weather state on different visits or refresh', () => {
     cy.visit('/')
+    .get('#weather-widget-btn')
+    .click()
     .get('#weather-btn')
     .click()
     .get('#rain')

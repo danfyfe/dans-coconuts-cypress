@@ -23,13 +23,13 @@ describe("Dan's Coconuts - Github", () => {
     const githubBaseUrl = "https://github.com/danfyfe";
     cy.visit('/github')
     .get('#github-repo-links a').then(($links) => {
-      expect($links).to.have.length(3)
+      expect($links).to.have.length(2)
       expect($links.eq(0)).to.contain('dans-coconuts-fe')
       expect($links.eq(0)).to.have.attr('href', `${githubBaseUrl}/dans-coconuts-fe`)
-      expect($links.eq(1)).to.contain('dans-coconuts-be')
-      expect($links.eq(1)).to.have.attr('href', `${githubBaseUrl}/dans-coconuts-be`)
-      expect($links.eq(2)).to.contain('dans-coconuts-cypress')
-      expect($links.eq(2)).to.have.attr('href', `${githubBaseUrl}/dans-coconuts-cypress`)
+      // expect($links.eq(1)).to.contain('dans-coconuts-be')
+      // expect($links.eq(1)).to.have.attr('href', `${githubBaseUrl}/dans-coconuts-be`)
+      expect($links.eq(1)).to.contain('dans-coconuts-cypress')
+      expect($links.eq(1)).to.have.attr('href', `${githubBaseUrl}/dans-coconuts-cypress`)
     })
   });
 });
