@@ -10,6 +10,10 @@ describe("Dan's Coconuts - Coconuts", () => {
       .get('#coconut-0') // id is coconut-[index]
   });
 
+  // it('tracks amounts of coconuts with cookie', () => {
+  //   cy.visit('/coconuts');
+  // });
+
   it('adds multiple coconuts when the add coconut button is clicked repeatedly', () => {
     cy.visit('/coconuts')
     .get('#add-coconut-btn')
