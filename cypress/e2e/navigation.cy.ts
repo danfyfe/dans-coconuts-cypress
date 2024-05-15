@@ -26,8 +26,8 @@ describe("Dan's Coconuts - Navigation", () => {
       expect($links.eq(2)).to.have.attr('href', '/github')
       expect($links.eq(3)).to.contain('Contact')
       expect($links.eq(3)).to.have.attr('href', '/contact')
-      expect($links.eq(3)).to.contain('Sign In')
-      expect($links.eq(3)).to.have.attr('href', '/signin?referer=/')
+      expect($links.eq(4)).to.contain('Sign In')
+      expect($links.eq(4)).to.have.attr('href', '/signin?referer=/')
     })
   });
 });
