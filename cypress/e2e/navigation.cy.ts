@@ -1,16 +1,12 @@
 describe("Dan's Coconuts - Navigation", () => {
   it('opens when nav trigger is clicked', () => {
     cy.visit('/')
-      .get('#nav-link-menu-outer').as('outer')
-      .should('have.class', 'opacity-0')
-      .get('#nav-link-menu-inner').as('inner')
-      .should('have.class', 'max-w-0')
+      .get('#link-nav-menu-outer').as('outer')
+      .should('have.class', 'opacity-0 invisible')
       .get('#nav-trigger')
       .click()
       .get('@outer')
-      .should('have.class', 'opacity-100')
-      .get('@inner')
-      .should('have.class', 'max-w-none')
+      .should('have.class', 'opacity-100 visible')
   });
 
   it('should have the correct links', () => {
