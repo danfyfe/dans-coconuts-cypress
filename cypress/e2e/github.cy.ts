@@ -25,15 +25,15 @@ describe("Dan's Coconuts - Github", () => {
     const githubBaseUrl = "https://github.com/danfyfe";
     cy.visit('/github')
     .get('#github-repo-links a').then(($links) => {
-      expect($links).to.have.length(4)
+      expect($links).to.have.length(3)
       expect($links.eq(0)).to.contain('dans-coconuts-fe')
       expect($links.eq(0)).to.have.attr('href', `${githubBaseUrl}/dans-coconuts-fe`)
       expect($links.eq(1)).to.contain('dans-coconuts-cypress')
       expect($links.eq(1)).to.have.attr('href', `${githubBaseUrl}/dans-coconuts-cypress`)
-      expect($links.eq(2)).to.contain('dans-coconuts-nightwatch')
-      expect($links.eq(2)).to.have.attr('href', `${githubBaseUrl}/dans-coconuts-nightwatch`)
-      expect($links.eq(3)).to.contain('web-dev-components')
-      expect($links.eq(3)).to.have.attr('href', `${githubBaseUrl}/web-dev-components`)
+      // expect($links.eq(2)).to.contain('dans-coconuts-nightwatch')
+      // expect($links.eq(2)).to.have.attr('href', `${githubBaseUrl}/dans-coconuts-nightwatch`)
+      expect($links.eq(2)).to.contain('web-dev-components')
+      expect($links.eq(2)).to.have.attr('href', `${githubBaseUrl}/web-dev-components`)
     })
   });
 });
